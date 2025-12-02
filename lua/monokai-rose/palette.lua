@@ -66,6 +66,25 @@ M.colors = {
   term_white = "#DCD4E0",
   term_bright_white = "#E8E4F0",
 
+  -- Blended colors (pre-calculated for backgrounds with alpha)
+  -- These are blended with bg (#1A1625)
+  diff_add_bg = "#283330",        -- green with ~15% opacity on bg
+  diff_change_bg = "#2E2A2A",     -- yellow with ~15% opacity on bg
+  diff_delete_bg = "#2D2029",     -- red with ~15% opacity on bg
+  diff_text_bg = "#3A352F",       -- yellow with ~25% opacity on bg
+  
+  git_add_bg = "#252E2A",         -- green with ~12% opacity on bg
+  git_change_bg = "#2A2725",      -- yellow with ~12% opacity on bg
+  git_delete_bg = "#281E24",      -- red with ~12% opacity on bg
+  
+  diag_error_bg = "#221A22",      -- red with ~8% opacity on bg
+  diag_warn_bg = "#231F1E",       -- orange with ~8% opacity on bg
+  diag_info_bg = "#1D1E28",       -- blue with ~8% opacity on bg
+  diag_hint_bg = "#211A28",       -- purple with ~8% opacity on bg
+  
+  selection_bg = "#3A3348",       -- selection with ~30% opacity on bg
+  selection_bg_strong = "#453D55", -- selection with ~40% opacity on bg
+
   -- Misc
   none = "NONE",
 }

@@ -28,10 +28,10 @@ function M.setup(config)
     CursorLine = { bg = c.bg_light },
     CursorLineNr = { fg = c.fg_dark, bold = true },
     Directory = { fg = c.blue },
-    DiffAdd = { bg = "#98C37926" },
-    DiffChange = { bg = "#E5C07B26" },
-    DiffDelete = { bg = "#E06C7526" },
-    DiffText = { bg = "#E5C07B40" },
+    DiffAdd = { bg = c.diff_add_bg },
+    DiffChange = { bg = c.diff_change_bg },
+    DiffDelete = { bg = c.diff_delete_bg },
+    DiffText = { bg = c.diff_text_bg },
     EndOfBuffer = { fg = c.bg },
     ErrorMsg = { fg = c.error },
     VertSplit = { fg = c.border },
@@ -138,10 +138,10 @@ function M.setup(config)
     DiagnosticUnderlineHint = { undercurl = true, sp = c.hint },
     DiagnosticUnderlineOk = { undercurl = true, sp = c.green },
 
-    DiagnosticVirtualTextError = { fg = c.error, bg = "#E06C7515" },
-    DiagnosticVirtualTextWarn = { fg = c.warning, bg = "#DDB26F15" },
-    DiagnosticVirtualTextInfo = { fg = c.info, bg = "#61AFEF15" },
-    DiagnosticVirtualTextHint = { fg = c.hint, bg = "#B06CD515" },
+    DiagnosticVirtualTextError = { fg = c.error, bg = c.diag_error_bg },
+    DiagnosticVirtualTextWarn = { fg = c.warning, bg = c.diag_warn_bg },
+    DiagnosticVirtualTextInfo = { fg = c.info, bg = c.diag_info_bg },
+    DiagnosticVirtualTextHint = { fg = c.hint, bg = c.diag_hint_bg },
 
     DiagnosticFloatingError = { fg = c.error },
     DiagnosticFloatingWarn = { fg = c.warning },
@@ -156,9 +156,9 @@ function M.setup(config)
     -- ============================================
     -- LSP
     -- ============================================
-    LspReferenceText = { bg = c.bg_selection .. "50" },
-    LspReferenceRead = { bg = c.bg_selection .. "50" },
-    LspReferenceWrite = { bg = c.bg_selection .. "66" },
+    LspReferenceText = { bg = c.selection_bg },
+    LspReferenceRead = { bg = c.selection_bg },
+    LspReferenceWrite = { bg = c.selection_bg_strong },
 
     LspSignatureActiveParameter = { fg = c.yellow_orange, bold = true },
     LspCodeLens = { fg = c.purple_dark },
@@ -296,9 +296,9 @@ function M.setup(config)
     GitSignsAddNr = { fg = c.git_add },
     GitSignsChangeNr = { fg = c.git_change },
     GitSignsDeleteNr = { fg = c.git_delete },
-    GitSignsAddLn = { bg = "#98C37920" },
-    GitSignsChangeLn = { bg = "#E5C07B20" },
-    GitSignsDeleteLn = { bg = "#E06C7520" },
+    GitSignsAddLn = { bg = c.git_add_bg },
+    GitSignsChangeLn = { bg = c.git_change_bg },
+    GitSignsDeleteLn = { bg = c.git_delete_bg },
     GitSignsCurrentLineBlame = { fg = c.fg_dim, italic = true },
 
     -- ============================================
@@ -541,8 +541,8 @@ function M.setup(config)
     -- ============================================
     -- Mini
     -- ============================================
-    MiniCursorword = { bg = c.bg_selection .. "50" },
-    MiniCursorwordCurrent = { bg = c.bg_selection .. "50" },
+    MiniCursorword = { bg = c.selection_bg },
+    MiniCursorwordCurrent = { bg = c.selection_bg },
     MiniIndentscopeSymbol = { fg = c.purple_dark },
     MiniIndentscopePrefix = { nocombine = true },
     MiniJump = { fg = c.bg, bg = c.purple },
@@ -691,8 +691,8 @@ function M.setup(config)
     NeogitHunkHeader = { fg = c.fg, bg = c.bg_light },
     NeogitHunkHeaderHighlight = { fg = c.fg, bg = c.bg_selection },
     NeogitDiffContextHighlight = { bg = c.bg_light },
-    NeogitDiffDeleteHighlight = { fg = c.red, bg = "#E06C7520" },
-    NeogitDiffAddHighlight = { fg = c.green, bg = "#98C37920" },
+    NeogitDiffDeleteHighlight = { fg = c.red, bg = c.git_delete_bg },
+    NeogitDiffAddHighlight = { fg = c.green, bg = c.git_add_bg },
 
     -- ============================================
     -- Gitsigns
@@ -704,9 +704,9 @@ function M.setup(config)
     -- ============================================
     -- Illuminate
     -- ============================================
-    IlluminatedWordText = { bg = c.bg_selection .. "50" },
-    IlluminatedWordRead = { bg = c.bg_selection .. "50" },
-    IlluminatedWordWrite = { bg = c.bg_selection .. "66" },
+    IlluminatedWordText = { bg = c.selection_bg },
+    IlluminatedWordRead = { bg = c.selection_bg },
+    IlluminatedWordWrite = { bg = c.selection_bg_strong },
 
     -- ============================================
     -- Hop
