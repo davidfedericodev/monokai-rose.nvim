@@ -6,9 +6,9 @@ function M.setup(config)
   local c = require("monokai-rose.palette").colors
 
   local transparent_bg = config.transparent and c.none or c.bg
-  local italic_comments = config.italic_comments and "italic" or nil
-  local italic_keywords = config.italic_keywords and "italic" or nil
-  local bold_functions = config.bold_functions and "bold" or nil
+  local italic_comments = config.italic_comments or false
+  local italic_keywords = config.italic_keywords or false
+  local bold_functions = config.bold_functions or false
 
   local highlights = {
     -- ============================================
